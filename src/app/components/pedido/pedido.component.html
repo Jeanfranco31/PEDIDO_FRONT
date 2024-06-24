@@ -2,7 +2,9 @@
   <div class="container_info">
     <div class="container_cards">
       <div class="card" *ngFor="let item of data">
-        <img *ngIf="item.logotipo" [src]="'data:image/png;base64,'+item.logotipo">
+        <div class="card_image_content">
+          <img *ngIf="item.logotipo" [src]="'data:image/png;base64,'+item.logotipo">
+        </div>
         <p>{{item.nombre}}</p>
         <button mat-button class="buttons" id="search" (click)="verMenu()">
           Ver menu del dia

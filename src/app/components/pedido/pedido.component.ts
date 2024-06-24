@@ -24,7 +24,6 @@ export class PedidoComponent implements OnInit {
   public obtenerDatos(){
     this._restauranteService.obtenerDatos().subscribe(response=>{
       this.data = response.data;
-
       for(let i = 0; i< this.data.length; i++){
         this.imgB64 = response.data[i].logotipo;
       }    
