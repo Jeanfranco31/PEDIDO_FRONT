@@ -1,4 +1,4 @@
 export const Enviroment = {
     production : false,
-    endpoint : "https://localhost:7207" //HOST SWAGGER 
+    endpoint : "https://localhost:7029" //HOST SWAGGER 
 }

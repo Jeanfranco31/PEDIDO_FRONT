@@ -1,3 +1,4 @@
+import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogRef : Dialog) { }
 
   ngOnInit() {
   }
 
+  verMenu(){
+    
+  }
 }
