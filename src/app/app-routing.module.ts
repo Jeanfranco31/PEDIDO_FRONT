@@ -7,25 +7,29 @@ import { ProveedorComponent } from './layouts/proveedor/proveedor.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { Restaurante_formComponent } from './modules/restaurante_form/restaurante_form.component';
 import { RecuperarClaveComponent } from './components/recuperarClave/recuperarClave.component';
+import { RestablecerClaveComponent } from './components/restablecerClave/restablecerClave.component';
+import { Usuario_layoutComponent } from './layouts/dashboard/usuario_layout/usuario_layout.component';
 
 const routes: Routes = [
-  {path:'',                                   redirectTo:'login', pathMatch:'full'},
-  {path:'login',                              component : LoginComponent},
-  {path:'recuperar_clave',                              component : RecuperarClaveComponent},
+  {path:'',                                  redirectTo:'login', pathMatch:'full'},
+  {path:'login',                             component : LoginComponent},
+  {path:'recuperar_clave',                   component : RecuperarClaveComponent},
+  {path:'restablecer_clave',                 component : RestablecerClaveComponent},
 
   {path:'home/seguridad',                    component : HomeComponent,
     children : [
-      {path:'desbloquear_usuario',            component : DesbloquearUsuarioComponent}
+      {path:'usuarios',                      component : Usuario_layoutComponent},
+      {path:'desbloquear_usuario',           component : DesbloquearUsuarioComponent}
     ]
   },
-  {path:'home/pedidos',                       component: ProveedorComponent,
+  {path:'home/pedidos',                      component: ProveedorComponent,
     children : [
       //{path:'/registrar_menu'},
-      {path:'pedido',                         component:PedidoComponent},
+      {path:'pedido',                        component:PedidoComponent},
       //{path:'/historial_pedido'}
     ]
   },
-  {path:'restaurantes/formulario_registro', component:Restaurante_formComponent}
+  {path:'restaurantes/formulario_registro',  component:Restaurante_formComponent}
   /*,
   {path:'home/reportes'},
   {path:'home/parametros'},

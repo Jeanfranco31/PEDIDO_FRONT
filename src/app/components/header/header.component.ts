@@ -1,5 +1,6 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,9 @@ export class HeaderComponent implements OnInit {
   }
 
   verMenu(){
-    
+    this.dialogRef.open(SidebarComponent,{
+      width:'100vw',
+      height:'100vh'
+    })
   }
 }

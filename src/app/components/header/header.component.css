@@ -17,7 +17,9 @@ header{
     align-items: center;
     font-family: "Montserrat", sans-serif; 
 }
-
+.icon_content{
+    opacity: 0;
+}
 .mat-h2, .mat-headline-6, .mat-typography .mat-h2, .mat-typography .mat-headline-6, .mat-typography h2 {
     font-size: 20px;
     font-weight: 500;
@@ -61,6 +63,7 @@ header{
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
     }
     .icon_content{
         width: 25%;

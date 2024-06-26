@@ -1,0 +1,45 @@
+<div class="main_container_bg">
+  <div class="container_info">
+    <div class="container_header">
+      <div class="container_header_title">
+        <h1>Registro de Usuarios</h1>
+      </div>
+      <div class="container_buttons_actions">
+
+        <div class="container_input_buttons">
+
+          <mat-form-field>
+            <label>Identificacion:</label>
+            <input type="text">
+          </mat-form-field>
+          <mat-form-field>
+            <label>Nombre:</label>
+            <input type="text">
+          </mat-form-field>
+
+        </div>
+
+        <div class="container_selected_button">
+          <mat-form-field appearance="outline" id="checkSelect">
+            <mat-label>Elija una opcion</mat-label>
+            <mat-select [ngModel]="selectedOption" (ngModelChange)="setSelection($event)"> 
+              <mat-option>Elija una opcion</mat-option>             
+              <mat-option *ngFor="let data of datosTabla" [value]="data.nombreUsuario">{{data.nombreUsuario}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="container_buttons">
+          <button mat-button class="buttons" id="search">
+            Buscar
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container_table">
+
+  </div>
+</div>

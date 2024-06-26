@@ -34,6 +34,7 @@ import { Restaurante_formComponent } from './modules/restaurante_form/restaurant
 import {MatDialogModule} from '@angular/material/dialog';
 import { RecuperarClaveComponent } from './components/recuperarClave/recuperarClave.component';
 import { RestablecerClaveComponent } from './components/restablecerClave/restablecerClave.component';
+import { Usuario_layoutComponent } from './layouts/dashboard/usuario_layout/usuario_layout.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { RestablecerClaveComponent } from './components/restablecerClave/restabl
     ProveedorComponent,
     PedidoComponent,
     RecuperarClaveComponent,
-    RestablecerClaveComponent
+    RestablecerClaveComponent,
+    Usuario_layoutComponent
   ],
   imports: [
     BrowserModule,

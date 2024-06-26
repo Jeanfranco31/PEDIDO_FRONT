@@ -9,18 +9,15 @@
       <div class="content_info">
         <div class="container_header">
           <div class="header_title">
-            <h1>Generar contraseña</h1>
-          </div>
-          <div class="header_content">
-            <p>Introduce el correo electronico vinculado con tu usuario donde recibiras las instrucciones para acceder a la cuenta</p>
+            <h1>Restablecer Contraseña</h1>
           </div>
         </div>
         <div class="container_form">
           <form [formGroup]="form" (submit)="generarClave()">
-            <mat-form-field appearance="outline" id="form_field">
-              <input type="text" matInput  formControlName="email">
-            </mat-form-field>
-            <button mat-button>Generar Contraseña</button>
+            <input type="text" matInput placeholder="Contraseña actual / temporal">
+            <input type="text" matInput placeholder="Nueva Contraseña">
+            <input type="text" matInput placeholder=" Repetir contraseña">
+            <button mat-button>Cambiar Contraseña</button>
           </form>
         </div>
       </div>
