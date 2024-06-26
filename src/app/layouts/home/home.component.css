@@ -22,6 +22,7 @@
     width: 80vw;
     height: 93vh;
     z-index: 1;
+    background-color: rgb(245, 245, 245);
 }
 
 @media screen and (max-width:386px) {

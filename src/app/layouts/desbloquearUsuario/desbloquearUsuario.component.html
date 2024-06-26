@@ -55,10 +55,15 @@
           <th mat-header-cell *matHeaderCellDef> Usuario </th>
           <td mat-cell *matCellDef="let element">{{element.nombreUsuario}}</td>
         </ng-container>
+
+        <ng-container matColumnDef="rol">
+          <th mat-header-cell *matHeaderCellDef> Rol actual </th>
+          <td mat-cell *matCellDef="let element">{{element.nombreRol}}</td>
+        </ng-container>
       
         <ng-container matColumnDef="state">
           <th mat-header-cell *matHeaderCellDef> Estado </th>
-          <td mat-cell *matCellDef="let element" id="state"> {{obtenerNombreEstado(element.idEstado)}} </td>
+          <td mat-cell *matCellDef="let element" id="state"> {{element.nombreEstado}} </td>
         </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

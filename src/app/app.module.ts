@@ -32,6 +32,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { LoaderComponent } from './components/Utilities/loader/loader.component';
 import { Restaurante_formComponent } from './modules/restaurante_form/restaurante_form.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { RecuperarClaveComponent } from './components/recuperarClave/recuperarClave.component';
+import { RestablecerClaveComponent } from './components/restablecerClave/restablecerClave.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     LoaderComponent,
     Restaurante_formComponent,
     ProveedorComponent,
-    PedidoComponent
+    PedidoComponent,
+    RecuperarClaveComponent,
+    RestablecerClaveComponent
   ],
   imports: [
     BrowserModule,

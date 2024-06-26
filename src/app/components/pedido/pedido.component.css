@@ -62,8 +62,7 @@
 
     .container_main_bg{
         width: 100%;
-        height: 100%;
-        /*background-color: rgb(245, 245, 245);*/
+        height: 93vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -78,16 +77,17 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        box-shadow: 0 0 20px  rgba(0, 0, 0, 0.333);
+        box-shadow: 0 0 5px  rgba(0, 0, 0, 0.333);
         margin-bottom: 15px;
     }
     .container_cards{
-        width: 90%;
+        width: 100%;
         height: 90%;
         display: flex;
         justify-content: space-around;
         flex-direction: row;
         overflow: scroll;
+        position: relative;
     }
 
 }

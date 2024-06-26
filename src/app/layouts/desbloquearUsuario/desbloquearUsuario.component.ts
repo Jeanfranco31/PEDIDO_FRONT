@@ -29,7 +29,7 @@ export class DesbloquearUsuarioComponent implements OnInit {
 
   userRowData : any = {};
   checked! : boolean;
-  displayedColumns: string[] = ['check', 'name', 'userName', 'state'];
+  displayedColumns: string[] = ['check', 'name', 'userName', 'rol', 'state'];
 
   dataSource: any = new MatTableDataSource();
   datosTabla: any[] = [];
@@ -57,7 +57,7 @@ export class DesbloquearUsuarioComponent implements OnInit {
     this._usuarioService.obtenerTodos().subscribe((response: any)=>{
       this.datosTabla = response.response.data;
       this.dataSource = new MatTableDataSource(response.response.data);
-
+      console.log(this.dataSource);
       this.dataSource.paginator = this.paginator;
     },error=>{
       console.log('Error al obtener los datos')
@@ -114,13 +114,6 @@ export class DesbloquearUsuarioComponent implements OnInit {
     this.userRowData = element;
     this.nombreEstadoObtenido = this.userRowData.checked;
     return this.nombreUsuarioObtenido = this.userRowData.nombreUsuario;
-  }
-
-  obtenerNombreEstado(idEstado:number):string{
-    if(idEstado === 3){
-      this.nombreEstado = "Bloqueado";
-    }
-    return this.nombreEstado;
   }
 
   refresh(): void {

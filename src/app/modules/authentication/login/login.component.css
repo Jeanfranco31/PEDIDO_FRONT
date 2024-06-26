@@ -46,10 +46,18 @@
 .buttons_content{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .buttonLogin{
     background-color: rgb(127,103,190);
     color: #ffffff;
     width: 200px;
     font-size: 0.8rem;
+}
+.buttonForgot{
+    background-color: none;
+    font-size: 0.8rem;
+    color: rgb(127,103,190);
+    margin-top: 10px;
 }

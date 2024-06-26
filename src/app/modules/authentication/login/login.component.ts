@@ -34,4 +34,7 @@ export class LoginComponent{
     });
   }
 
+  vistaRecuperarClave(){
+    this.router.navigate(['/recuperar_clave']);
+  }
 }

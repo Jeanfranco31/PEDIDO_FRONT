@@ -6,10 +6,12 @@ import { DesbloquearUsuarioComponent } from './layouts/desbloquearUsuario/desblo
 import { ProveedorComponent } from './layouts/proveedor/proveedor.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { Restaurante_formComponent } from './modules/restaurante_form/restaurante_form.component';
+import { RecuperarClaveComponent } from './components/recuperarClave/recuperarClave.component';
 
 const routes: Routes = [
   {path:'',                                   redirectTo:'login', pathMatch:'full'},
   {path:'login',                              component : LoginComponent},
+  {path:'recuperar_clave',                              component : RecuperarClaveComponent},
 
   {path:'home/seguridad',                    component : HomeComponent,
     children : [
