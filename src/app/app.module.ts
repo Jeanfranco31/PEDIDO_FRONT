@@ -72,7 +72,8 @@ import { Usuario_layoutComponent } from './layouts/dashboard/usuario_layout/usua
     MatSnackBarModule,
     DialogModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
 
   ],
   providers: [],

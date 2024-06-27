@@ -42,4 +42,11 @@ export class SidebarComponent implements OnInit {
     this.ocultarSideBar();
   }
   
+
+  isActive = false;
+
+  toggleSidebar() {
+    this.isActive = !this.isActive;
+  }
+
 }

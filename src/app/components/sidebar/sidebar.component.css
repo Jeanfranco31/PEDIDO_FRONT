@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
 .sidebar_container{
     width: 20vw;
     height: 100vh;
     font-family: "Montserrat", sans-serif; 
+    position: absolute;
 }
 
 .container_logo{
@@ -62,9 +62,9 @@
         width: 80vw;
         height: 100vh;
         font-family: "Montserrat", sans-serif; 
-        position: fixed;
+        position: absolute;
         background-color: #ffffff;
-        opacity: 1;
+        opacity: 0;
         z-index: 1;
     }
     .container_logo{
@@ -79,6 +79,7 @@
         display: flex;
         justify-content: end;
         align-items: center;
+        opacity: 1;
     }
     .icon_content button{
         background-color: transparent;
@@ -89,5 +90,9 @@
     .icon_content button i{
         color:#ffffff;
         font-size: 1.5rem;
+    }
+
+    .sidebar_container.active {
+        opacity: 1;
     }
 }

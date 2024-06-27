@@ -23,6 +23,9 @@
     height: 93vh;
     z-index: 1;
     background-color: rgb(245, 245, 245);
+    position: absolute;
+    right: 0;
+    top: 5%;
 }
 
 @media screen and (max-width:386px) {
