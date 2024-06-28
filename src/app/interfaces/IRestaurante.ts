@@ -3,7 +3,6 @@ export interface IRestaurante {
     nombre:string,
     correo:string,
     telefono:string,
-    username:string,
     direccion:string,
     logotipo:string,
     contrasena:string

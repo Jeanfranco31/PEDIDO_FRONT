@@ -1,6 +1,8 @@
+import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { AddUserComponent } from './add-edit-search-usuario/add-user/add-user.component';
 
 @Component({
   selector: 'app-usuario_layout',
@@ -15,7 +17,10 @@ export class Usuario_layoutComponent implements OnInit {
   dataSource = new MatTableDataSource();
   displayedColumns: string[] = ['action', 'identificacion', 'nombre', 'nombreUsuario', 'empresa' ,'estado'];
 
-  constructor(private fb: FormBuilder) { 
+  constructor(
+    private fb: FormBuilder,
+    private dialog: Dialog
+  ) { 
     this.form = this.fb.group({
       identificacion: [''],
       nombre: [''],
@@ -34,5 +39,11 @@ export class Usuario_layoutComponent implements OnInit {
     this.nombreEstadoObtenido = this.userRowData.checked;
     return this.nombreUsuarioObtenido = this.userRowData.nombreUsuario;
     */
+  }
+  viewAddUser(){
+    this.dialog.open(AddUserComponent,{
+      width:'90%',
+      height:'80%'
+    })
   }
 }

@@ -26,7 +26,6 @@ export class Restaurante_formComponent implements OnInit {
       nombre : new FormControl('',Validators.required),
       correo : new FormControl('',Validators.required),
       telefono : new FormControl('',Validators.required),
-      username : new FormControl ('',Validators.required),
       direccion : new FormControl('',Validators.required),
       logotipo : new FormControl('',Validators.required),
       contrasena : new FormControl ('',Validators.required)
@@ -53,7 +52,6 @@ export class Restaurante_formComponent implements OnInit {
       nombre : this.form.value.nombre,
       correo : this.form.value.correo,
       telefono : this.form.value.telefono,
-      username : this.form.value.username,
       direccion : this.form.value.direccion,
       logotipo : this.b64String,
       contrasena : this.form.value.contrasena

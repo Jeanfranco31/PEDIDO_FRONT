@@ -26,12 +26,16 @@ export class LoginComponent{
 
 
   onSubmit(){
+    /*
     this._loginService.login(this.form.value).subscribe(response =>{
       console.log("Datos correctos");
+      */
       this.router.navigate(['/home/seguridad/usuarios']);
+      /*
     }, error =>{
       console.log("Datos incorrectos",error);
     });
+    */
   }
 
   vistaRecuperarClave(){

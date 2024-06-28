@@ -35,6 +35,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { RecuperarClaveComponent } from './components/recuperarClave/recuperarClave.component';
 import { RestablecerClaveComponent } from './components/restablecerClave/restablecerClave.component';
 import { Usuario_layoutComponent } from './layouts/dashboard/usuario_layout/usuario_layout.component';
+import { AddUserComponent } from './layouts/dashboard/usuario_layout/add-edit-search-usuario/add-user/add-user.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { Usuario_layoutComponent } from './layouts/dashboard/usuario_layout/usua
     PedidoComponent,
     RecuperarClaveComponent,
     RestablecerClaveComponent,
-    Usuario_layoutComponent
+    Usuario_layoutComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
