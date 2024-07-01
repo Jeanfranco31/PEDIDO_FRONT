@@ -50,17 +50,15 @@
         <div class="containers_security">
           <div class="container_selected_button_profile">
             <label id="profile_label">Perfil:</label>
-            <mat-form-field>
               <mat-select class="select" formControlName="opcionSecurity">
                 <mat-option value="opt1">Viamatica</mat-option>
                 <mat-option value="opt2">Empresa 2</mat-option>
               </mat-select>
-            </mat-form-field>
           </div>
-          <mat-form-field class="active_profile">
+          <div class="active_profile">
             <label>Activo:</label>
-            <mat-checkbox class="example-margin"></mat-checkbox>   
-          </mat-form-field>
+            <mat-checkbox class="example-margin" [(ngModel)]="checked" formControlName="checked"></mat-checkbox>   
+          </div>
         </div>
       </div>
       <div class="buttons_content">

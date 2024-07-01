@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-user',
@@ -8,8 +8,21 @@ import { FormGroup } from '@angular/forms';
 })
 export class AddUserComponent implements OnInit {
 
-  form!:FormGroup;
-  constructor() { }
+  checked : boolean = false;
+  form:FormGroup;
+
+  constructor(private fb:FormBuilder) { 
+    this.form = this.fb.group({
+      identificacion: ['', [ Validators.maxLength(10)]],
+      nombre: ['', [Validators.maxLength(50)]],
+      correo: ['', [Validators.email, Validators.maxLength(60)]],
+      telefono: ['', [Validators.maxLength(10)]],
+      direccion: ['', [Validators.maxLength(70)]],
+      opcionEmpresa: ['', Validators.required],
+      opcionSecurity: ['', Validators.required],
+      checked: [false, Validators.requiredTrue]
+    });
+  }
 
   ngOnInit() {
   }

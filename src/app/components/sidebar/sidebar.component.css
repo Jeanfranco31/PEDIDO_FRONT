@@ -57,7 +57,7 @@
 }
 
 
-@media screen and (max-width:386px) {
+@media screen and (max-width:500px) {
     .sidebar_container{
         width: 80vw;
         height: 100vh;
