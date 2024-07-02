@@ -12,7 +12,7 @@
               <mat-form-field appearance="outline" id="checkSelect">
                 <mat-label>Elija una opcion</mat-label>
                 <mat-select [ngModel]="selectedOption" (ngModelChange)="setSelection($event)"> 
-                  <mat-option>Elija una opcion</mat-option>             
+                  <mat-option value="pInicial">Elija una opcion</mat-option>             
                   <mat-option *ngFor="let data of datosTabla" [value]="data.correo">{{data.correo}}</mat-option>
                 </mat-select>
               </mat-form-field>

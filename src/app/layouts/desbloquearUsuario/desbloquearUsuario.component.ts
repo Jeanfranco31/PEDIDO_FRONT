@@ -23,7 +23,7 @@ export class DesbloquearUsuarioComponent implements OnInit {
   nombreUsuarioObtenido : string = "";
   nombreEstadoObtenido! : boolean;
   searchText: any;
-
+  pInicial! : string;
   nombreUsuariosFiltrados : any = {};
   usuariosBloqueados : UsuarioBlock[] = [];
 
@@ -77,16 +77,15 @@ export class DesbloquearUsuarioComponent implements OnInit {
   }
 
   limpiarDatos():void{
+    this.selectedOption = this.pInicial;
     this.obtenerDatos();
   }
 
   desbloquearUsuario():void{
     if(this.nombreEstadoObtenido){
+      console.log(this.nombreUsuarioObtenido)
       if(this.nombreUsuarioObtenido){
         this.load = false;
-        setTimeout(() => {
-          this.load = true;
-        }, 5000);
         this._usuarioService.desbloquearCuenta(this.nombreUsuarioObtenido).subscribe(response=>{
           this.dialog.open(SuccessComponent,
             {
@@ -113,7 +112,7 @@ export class DesbloquearUsuarioComponent implements OnInit {
   rowSelect(element:any):string{
     this.userRowData = element;
     this.nombreEstadoObtenido = this.userRowData.checked;
-    return this.nombreUsuarioObtenido = this.userRowData.nombreUsuario;
+    return this.nombreUsuarioObtenido = this.userRowData.correo;
   }
 
   refresh(): void {

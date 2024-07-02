@@ -2,6 +2,7 @@ import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+import { Env_Rutas } from 'src/enviroments/Env_Rutas';
 
 @Component({
   selector: 'app-sidebar',
@@ -29,16 +30,16 @@ export class SidebarComponent implements OnInit {
   }
 
   navigateToUsers(){
-    this.router.navigate(["home/seguridad/usuarios"]);
+    this.router.navigate([Env_Rutas.r_Usuarios]);
     this.ocultarSideBar();
   }
 
   navigateToUnblockUser(){
-    this.router.navigate(["home/seguridad/desbloquear_usuario"]);
+    this.router.navigate([Env_Rutas.r_DesbloquearUsuario]);
     this.ocultarSideBar();
   }
   navigateToPedido(){
-    this.router.navigate(["home/pedidos/pedido"]);
+    this.router.navigate([Env_Rutas.r_Pedidos]);
     this.ocultarSideBar();
   }
   

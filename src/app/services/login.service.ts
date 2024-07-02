@@ -16,15 +16,9 @@ constructor(private http:HttpClient, private router:Router ) { }
 
 
   login(usuario:Login_Usuario):Observable<any>{
-    const url = `${this.url}/validarLogin`; 
+    const url = `${this.url}${Enviroment.endpointAPILogin}`; 
     return this.http.post(url,usuario);
   }
-/*
-  login(usuario:any):Observable<any>{
-    const url = `${this.url}/validarLogin`; 
-    return this.http.post<any>(this.url,usuario);
-  }
-    */
 
   logout(){
     this.router.navigate(['/login']);

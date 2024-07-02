@@ -1,14 +1,14 @@
 .container_main_bg{
     width: 100%;
     height: 100%;
-    background-color: rgb(245, 245, 245);
+    /*background-color: var(--bg_blanco_100);*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container_main_bg .container_info{
-    background-color: #ffffff;
+    /*background-color: var(--bg_blanco_100);*/
     width: 90%;
     height: 90%;
     display: flex;
@@ -30,7 +30,8 @@
     height: auto;
     font-size: 2rem;
     text-align: center;
-    color: rgb(127,103,190);
+    color: var(--color_texto_lila);
+    font-family: var(--letra_montserrat);
 }
 
 .card{
@@ -40,8 +41,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0 0 20px  rgba(0, 0, 0, 0.333);
+    box-shadow: 0 0 20px var(--bg_negro_33);
 }
+
 .card_image_content{
     height: 60%;
     width: 100%;
@@ -49,25 +51,28 @@
     justify-content: center;
     z-index: 1;
 }
+
 .card img{
+    width: auto;
     height: 100%;
 }
+
 .card p{
     font-size: 1.4rem;
-    font-weight: bolder;
+    font-weight: var(--fw_bolder);
     padding: 8px 0;
     text-transform: uppercase;
     z-index: 2;
 }
 
 #search{
-    background-color: rgb(127,103,190);
-    color: #ffffff;
+    background-color: var(--bg_lila_100);
+    color: var(--color_texto_blanco);
     width: 70%;
     z-index: 2;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:792px) {
 
     .container_main_bg{
         width: 100%;
@@ -85,10 +90,17 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        box-shadow: 0 0 5px  rgba(0, 0, 0, 0.333);
+        box-shadow: 0 0 5px var(--bg_negro_33);
         margin-bottom: 15px;
     }
-    
+    .card img{
+        width: auto;
+        height: 100%;
+    }
+
+    .card p{
+        font-family: var(--letra_montserrat);
+    }
     .container_cards{
         width: 100%;
         height: 90%;
@@ -104,6 +116,6 @@
         height: 30px;
         font-size: 2rem;
         text-align: center;
-        color: rgb(127,103,190);
+        color: var(--bg_lila_100);
     }
 }

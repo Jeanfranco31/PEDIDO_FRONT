@@ -33,8 +33,8 @@
     border-bottom-left-radius: 0 !important;
 }
 .icon{
-    background-color: rgb(127,103,190);
-    color: #ffffff;
+    background-color: var(--bg_lila_100);
+    color: var(--color_texto_blanco);
     width: 45px;
     height: 55px;
     border-top-left-radius: 5px;
@@ -50,14 +50,14 @@
     align-items: center;
 }
 .buttonLogin{
-    background-color: rgb(127,103,190);
-    color: #ffffff;
+    background-color: var(--bg_lila_100);
+    color: var(--color_texto_blanco);
     width: 200px;
     font-size: 0.8rem;
 }
 .buttonForgot{
     background-color: none;
     font-size: 0.8rem;
-    color: rgb(127,103,190);
+    color: var(--bg_lila_100);
     margin-top: 10px;
 }
