@@ -1,7 +1,7 @@
 <div class="container_main_bg">
   <div class="container_info">
+    <h2>Sitios Disponibles</h2>
     <div class="container_cards">
-      <h2>Sitios Disponibles</h2>
       <div class="card" *ngFor="let item of data">
         <div class="card_image_content">
           <img *ngIf="item.logotipo" [src]="'data:image/png;base64,'+item.logotipo">

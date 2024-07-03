@@ -60,12 +60,12 @@
 
 @media screen and (max-width:792px) {
     .sidebar_container{
-        width: 80vw;
+        width: 0vw;
         height: 100vh;
         font-family: "Montserrat", sans-serif; 
         position: absolute;
         background-color: var(--bg_blanco_100);
-        opacity: 0;
+        left: -50vw;
         z-index: 1;
     }
     .container_logo{
@@ -94,6 +94,7 @@
     }
 
     .sidebar_container.active {
-        opacity: 1;
+        width: 80vw;
+        left: 0vw;
     }
 }

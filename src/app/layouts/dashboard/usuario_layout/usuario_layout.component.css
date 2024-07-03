@@ -102,6 +102,10 @@ mat-label{
     padding-top: 5px;
     padding-left: 10px;
 }
+.container_selected_button .select{
+    border: 1px solid rgba(0, 0, 0, 0.396);
+    border-radius: 3px;
+}
 
 /*BOTONES*/
 .container_buttons{
@@ -138,6 +142,19 @@ mat-label{
     margin: 0 auto;
 }
 
+.loader_content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width:792px) {
     .main_container_bg{
         width: 100%;
@@ -146,8 +163,7 @@ mat-label{
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 7vh;
-        z-index: 3;
+        top:4vh;
         background-color: var(--bg_blanco_100);
     }
     .container_header .container_header_title{
@@ -194,6 +210,10 @@ mat-label{
         align-items: center;
         flex-direction: column;
     }
+    .container_selected_button .select{
+        border: 1px solid rgba(0, 0, 0, 0.396);
+        border-radius: 3px;
+    }
 
     .container_buttons{
         width: 70%;
@@ -214,5 +234,17 @@ mat-label{
         top: 20vh;
         margin: 0 auto;
         overflow-y: scroll;
+    }
+    .loader_content{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
